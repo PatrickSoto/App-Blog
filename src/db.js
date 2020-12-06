@@ -1,5 +1,5 @@
 import * as SQLite from 'expo-sqlite';
-
+//creando base de datos
 const db = SQLite.openDatabase('post.db')
 
 export class DB {
