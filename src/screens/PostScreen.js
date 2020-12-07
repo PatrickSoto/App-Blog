@@ -49,3 +49,56 @@ export const PostScreen = ({ navigation }) => {
       { cancelable: false }
     );
   };
+  if (!post) {
+    return null
+  }
+  return (
+    <ScrollView>
+      <Image source={{ uri: post.img }} style={styles.image} />
+      <View style={styles.textWrap}>
+        <Text style={styles.title}>{post.text}</Text>
+      </View>
+      <Button
+        title=" Eliminar"
+        color={THEME.DANGER_COLOR}
+        onPress={removeHandler}
+      />
+    </ScrollView>
+  );
+};
+
+PostScreen.navigationOptions = ({ navigation }) => {
+  const date = navigation.getParam("date");
+  const booked = navigation.getParam("booked");
+  const toggleHandler = navigation.getParam("toggleHandler");
+  const iconName = booked ? 'ios-star' : 'ios-star-outline'
+  return {
+    headerTitle: "Publicacion del " + new Date(date).toLocaleDateString(), //Aqui ponemos en el header lo que queremos que se vea xuando entramos a la publicacion: nos devolvera "Publicacion del + la fecha"
+    headerRight:() => (
+      <HeaderButtons HeaderButtonComponent={AppHeaderIcon}>
+        <Item 
+          title="Take photo" 
+          iconName={iconName} 
+          onPress={toggleHandler}/>
+      </HeaderButtons>
+    ),
+  };
+};
+
+const styles = StyleSheet.create({
+  image: {
+    width: "100%",
+    height: 600,
+    marginTop: 5,
+    borderTopLeftRadius: 10,
+    borderTopRightRadius: 10,
+    borderBottomLeftRadius: 10,
+    borderBottomRightRadius: 10
+  },
+  textWrap: {
+    padding: 20
+  },
+  title: {
+    fontFamily: "open-regular"
+  }
+});
