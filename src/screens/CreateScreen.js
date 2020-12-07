@@ -1,12 +1,12 @@
 import React, {useState, useRef} from 'react';
 import { StyleSheet, View, Text, TextInput, Image, Button, ScrollView, TouchableWithoutFeedback, Keyboard } from 'react-native';
-/*import { HeaderButtons, Item } from 'react-navigation-header-buttons'
+import { HeaderButtons, Item } from 'react-navigation-header-buttons'
 import { useDispatch } from 'react-redux'
 
 import { AppHeaderIcon } from '../components/AppHeaderIcon'
 import { THEME } from '../theme';
 import { addPost } from '../store/actions/post'
-import { PhotoPicker } from '../components/PhotoPicker';*/ //En espera del avance de mi comapa;ero Patrick
+import { PhotoPicker } from '../components/PhotoPicker';
 
 export const CreateScreen = ({ navigation }) => {
   const dispatch = useDispatch()
