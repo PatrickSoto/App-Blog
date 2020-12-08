@@ -33,3 +33,30 @@ export const MainScreen = ({ navigation }) => {
       </View>
     )
   }
+
+  return (
+    <PostList data={allPosts} onOpen={openPostHandler}/>
+  );
+};
+
+MainScreen.navigationOptions = ({navigation}) => ({
+  headerTitle: " Mi blog",
+  headerRight: () => (
+    <HeaderButtons HeaderButtonComponent={AppHeaderIcon}>
+      <Item title="Take photo" iconName="ios-camera" onPress={() => navigation.push('Create')}/>
+    </HeaderButtons>
+  ),
+  headerLeft: () => (
+    <HeaderButtons HeaderButtonComponent={AppHeaderIcon}>
+      <Item title="Toggle Drawer" iconName="ios-menu" onPress={() => navigation.toggleDrawer()}/>
+    </HeaderButtons>
+  )
+});
+
+const styles = StyleSheet.create({
+  center: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center'
+  }
+})
