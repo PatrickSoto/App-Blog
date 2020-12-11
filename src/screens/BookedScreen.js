@@ -21,3 +21,23 @@ export const BookedScreen = ({ navigation }) => {
     <PostList data={bookedPosts} onOpen={openPostHandler}/>
   );
 };
+
+BookedScreen.navigationOptions = ({navigation}) => ({
+  headerTitle: "Favoritos",
+  headerLeft: () => (
+    <HeaderButtons HeaderButtonComponent={AppHeaderIcon}>
+      <Item title="Toggle Drawer" iconName="ios-menu" onPress={() => navigation.toggleDrawer()}/>
+    </HeaderButtons>
+  )
+});
+
+const styles = StyleSheet.create({
+  wrapper: {
+    padding: 10
+  },
+  center: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center"
+  }
+});
