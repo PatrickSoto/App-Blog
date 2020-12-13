@@ -55,3 +55,57 @@ const bottomTabsConfig = {
     }
   }
 }
+
+const BottomNavigator = 
+  Platform.OS === 'android'
+    ? createMaterialBottomTabNavigator(bottomTabsConfig, {
+      activeTintColor: '#fff',
+      shifting: true,
+      barStyle: {
+        backgroundColor: THEME.MAIN_COLOR
+      }
+    }) 
+    : createBottomTabNavigator(
+      bottomTabsConfig,
+      {
+        tabBarOptions: {
+          activeTintColor: THEME.MAIN_COLOR
+        }
+      }
+    )
+
+const AboutNavigator = createStackNavigator({
+    About: AboutScreen,
+  },
+  navigatorOptions
+);
+
+const CreateNavigator = createStackNavigator({
+    Create: CreateScreen,
+  },
+  navigatorOptions
+);
+
+const MainNavigator = createDrawerNavigator({
+  PostTabs: {
+    screen: BottomNavigator,
+    navigationOptions: {
+      drawerLabel: 'Principal      '
+    }
+  },
+  Create: {
+    screen: CreateNavigator,
+    navigationOptions: {
+      drawerLabel: 'Nueva publicación'
+    }
+  }
+}, {
+  contentOptions: {
+    activeTintColor: THEME.MAIN_COLOR,
+    labelStyle: {
+      fontFamily: 'open-bold',
+    }
+  }
+})
+
+export const AppNavigation = createAppContainer(MainNavigator);
