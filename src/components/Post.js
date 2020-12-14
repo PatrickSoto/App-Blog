@@ -20,7 +20,11 @@ export const Post = ({ post, onOpen }) => {
 const styles = StyleSheet.create({
   post: {
     marginBottom: 15,
-    overflow: "hidden"
+    overflow: "hidden",
+    borderTopLeftRadius: 10,
+    borderTopRightRadius: 10,
+    borderBottomLeftRadius: 10,
+    borderBottomRightRadius: 10
   },
   image: {
     width: "100%",
