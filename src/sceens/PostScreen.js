@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { THEME } from '../theme';
 import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 import { AppHeaderIcon } from '../components/AppHeaderIcon';
-//import { toggleBooked, removePost } from '../store/actions/post'; en espera de mi compa;ero patrick
+import { toggleBooked, removePost } from '../store/actions/post'; 
 
 export const PostScreen = ({ navigation }) => {
   const dispatch = useDispatch()
@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
     width: "100%",
     height: 600,
     marginTop: 5,
-    borderTopLeftRadius: 10,
+   
     borderTopRightRadius: 10,
     borderBottomLeftRadius: 10,
     borderBottomRightRadius: 10
