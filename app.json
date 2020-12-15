@@ -2,7 +2,8 @@
   "expo": {
     "name": "App-Blog",
     "slug": "App-Blog",
-    "version": "1.0.0",
+    "privacy": "public",
+    "sdkVersion": "37.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
@@ -30,3 +31,4 @@
     }
   }
 }
+
