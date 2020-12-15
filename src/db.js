@@ -4,7 +4,7 @@ const db = SQLite.openDatabase('post.db')
 
 export class DB {
     static init() {
-        return new Promise((resolve, reject) => {
+        return new Promise((resolve, reject) => {//retornando la promesa
             db.transaction(tx => {
                 tx.executeSql(
                     'CREATE TABLE IF NOT EXISTS posts (id INTEGER PRIMARY KEY NOT NULL, text TEXT NOT NULL, img TEXT, date TEXT, booked INT)',
@@ -20,7 +20,7 @@ export class DB {
         return new Promise((resolve, reject) => {
             db.transaction(tx => {
                 tx.executeSql(
-                    'SELECT * FROM posts',
+                    'SELECT * FROM posts',//seleccionando nuestra tabla en la base de datos
                     [],
                     (_, result) => resolve(result.rows._array),
                     (_, error) => reject(error)
@@ -28,7 +28,7 @@ export class DB {
             })
         })
     }
-
+//insertando datos en nuestra tabla
     static createPost({text, date, booked, img}) {
         return new Promise((resolve, reject) => {
             db.transaction(tx => {
@@ -41,7 +41,7 @@ export class DB {
             })
         })
     }
-
+//actualizando datos en nuestra table, que se selecciona por medio de id
     static updatePost(post) {
         return new Promise((resolve, reject) => {
             db.transaction(tx => {
@@ -54,7 +54,7 @@ export class DB {
             })
         })
     }
-
+//eliminando datos en nuestra table, que se selecciona por medio de id
     static removePost(id) {
         return new Promise((resolve, reject) => {
             db.transaction(tx => {

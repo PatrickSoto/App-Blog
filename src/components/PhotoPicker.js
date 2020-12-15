@@ -1,21 +1,21 @@
 import React, {useState} from 'react';
 import * as ImagePicker from 'expo-image-picker';
-import * as Permissions from 'expo-permissions';
+import * as Permissions from 'expo-permissions';// exportando  dependencias para permisos de la camara desde nodes module
 
-import { View, StyleSheet, Image, Button, Alert } from 'react-native';
+import { View, StyleSheet, Image, Button, Alert } from 'react-native';// exportando  dependencias desde nodes module
 
-async function askForPermissions() {
+async function askForPermissions() {//funcion permisos
     const { status } = await Permissions.askAsync(
         Permissions.CAMERA,
         Permissions.CAMERA_ROLL
     )
     if (status !== 'granted') {
-        Alert.alert('Error ', "No has dado permiso para crear una foto")
+        Alert.alert('Error ', "No has dado permiso para crear una foto")//alerta de permisos no concedidos
         return false
     }
     return true
 }
-
+//importsndo ls foto desde el dispositivo
 export const PhotoPicker = ({ onPick }) => {
     const [image, setImage] = useState(null)
     const takePhoto = async () => {

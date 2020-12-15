@@ -1,7 +1,9 @@
 import React from 'react';
 import { View, StyleSheet, FlatList, Text } from 'react-native';
-import {Post} from './Post'
+import {Post} from './Post'// exportando  dependencias desde nodes module
 
+
+//comprobando en pantalla principal si hay alguna publicacion o no
 export const PostList = ({data, onOpen}) => {
     if (!data.length) {
         return (

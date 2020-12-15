@@ -1,6 +1,6 @@
 import React from 'react';
-import { ImageBackground, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-
+import { ImageBackground, StyleSheet, Text, TouchableOpacity, View } from 'react-native';// exportando  dependencias desde nodes module
+//capturando la imagen en la pantalla
 export const Post = ({ post, onOpen }) => {
   return (
     <TouchableOpacity activeOpacity={0.7} onPress={() => onOpen(post)}>
@@ -16,7 +16,7 @@ export const Post = ({ post, onOpen }) => {
     </TouchableOpacity>
   );
 };
-
+// dando medidas a la imagen
 const styles = StyleSheet.create({
   post: {
     marginBottom: 15,
