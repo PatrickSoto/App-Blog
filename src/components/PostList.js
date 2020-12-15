@@ -24,7 +24,7 @@ export const PostList = ({data, onOpen}) => {
         </View>
     )
 }
-
+//dando posisciones y centrando
 const styles = StyleSheet.create({
     wrapper: {
       padding: 10
