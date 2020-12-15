@@ -7,7 +7,7 @@ import { AppHeaderIcon } from '../components/AppHeaderIcon'
 import { PostList } from '../components/PostList';
 import { loadPosts } from '../store/actions/post';
 import { THEME } from '../theme';
-
+//Pagina principal donde se muestran todas las publicaciones que se han hecho.
 export const MainScreen = ({ navigation }) => {
   const openPostHandler = post => {
     navigation.navigate("Post", {
@@ -38,7 +38,7 @@ export const MainScreen = ({ navigation }) => {
     <PostList data={allPosts} onOpen={openPostHandler}/>
   );
 };
-
+//Texto que aparece el parte superior de la pantalla principal
 MainScreen.navigationOptions = ({navigation}) => ({
   headerTitle: " Mi blog",
   headerRight: () => (

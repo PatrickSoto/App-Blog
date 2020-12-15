@@ -8,6 +8,7 @@ import { THEME } from '../theme';
 import { addPost } from '../store/actions/post'
 import { PhotoPicker } from '../components/PhotoPicker';
 
+/*En esta pantalla es la que se crean las publicaciones*/
 export const CreateScreen = ({ navigation }) => {
   const dispatch = useDispatch()
   const [text, useText] = useState('')
@@ -27,7 +28,7 @@ export const CreateScreen = ({ navigation }) => {
   const photoPickHandler = uri => {
     imageRef.current = uri
   }
-
+//Se agregaa el texto a la publicacion 
   return (
     <ScrollView>
       <TouchableWithoutFeedback onPress={() => Keyboard.dismiss}>
@@ -52,7 +53,7 @@ export const CreateScreen = ({ navigation }) => {
     </ScrollView>
   );
 };
-
+//aqui esta el boton para crear publicacion
 CreateScreen.navigationOptions = ({navigation}) => ({
   headerTitle: "Crear publicación",
   headerLeft: () => (

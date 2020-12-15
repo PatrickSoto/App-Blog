@@ -6,6 +6,8 @@ import { useSelector } from 'react-redux'
 import { AppHeaderIcon } from '../components/AppHeaderIcon'
 import { PostList } from '../components/PostList';
 
+//en esta pagina se guardan las publicaciones que se han hecho pero solo las favoritas, cuando se le de a la estrellita se guardaran  en la 
+//panrtalla de favoritos
 export const BookedScreen = ({ navigation }) => {
   const openPostHandler = post => {
     navigation.navigate("Post", {

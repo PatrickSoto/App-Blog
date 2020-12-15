@@ -11,7 +11,7 @@ export const AboutScreen = () => {
     </View>
   );
 };
-
+/*En esta pantalla quisimos poner nuestra informacion pero por cuestiones de tiempo no se pudo*/
 AboutScreen.navigationOptions = ({navigation}) => ({
   headerTitle: " Sobre la aplicación",
 headerLeft: () => (

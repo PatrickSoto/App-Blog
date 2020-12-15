@@ -66,7 +66,7 @@ export const PostScreen = ({ navigation }) => {
     </ScrollView>
   );
 };
-
+//Aqqui mostramos la paprte superior de la pantalla post la cual nos dira la fecha de la cual fue hecha dicha publicacion
 PostScreen.navigationOptions = ({ navigation }) => {
   const date = navigation.getParam("date");
   const booked = navigation.getParam("booked");
@@ -84,7 +84,7 @@ PostScreen.navigationOptions = ({ navigation }) => {
     ),
   };
 };
-
+//Esto es para hacer que las publicaciones tengan un borde redondo como se ha especificado en los lineamientos
 const styles = StyleSheet.create({
   image: {
     width: "100%",

@@ -22,7 +22,7 @@ const navigatorOptions = {
     headerTintColor: Platform.OS === "android" ? "#fff" : THEME.MAIN_COLOR
   }
 }
-
+//Aqui se hace la barra de navegacion para un mejor disenio y mejor comprendimiento al momento de usar la aplicaion.
 const PostNavigator = createStackNavigator(
   {
     Main: MainScreen,
