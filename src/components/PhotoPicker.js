@@ -40,7 +40,7 @@ export const PhotoPicker = ({ onPick }) => {
         </View>
     )
 }
-
+//dando posisciones y centrando
 const styles = StyleSheet.create({
     wrapper: {
         marginBottom: 10
